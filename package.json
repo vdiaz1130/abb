@@ -3,14 +3,9 @@
 	"private": true,
 	"workspaces": [ "packages/*" ],
 	"version": "1.0.0",
-	"description": "",
-	"main": "index.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
+		"test": "echo \"Sanity: root test script executed\" && exit 0",
 		"rmrfnodemods": "rimraf packages/*/node_modules&&rimraf ./node_modules",
 		"rmrfdist": "rimraf packages/*/dist"
-	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC"
+	}
 }

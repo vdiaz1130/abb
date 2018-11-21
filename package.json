@@ -7,7 +7,7 @@
   "version": "1.0.0",
   "scripts": {
     "test": "echo \"Sanity: root test script executed\" && exit 0",
-    "build:server": "lerna run build --scope={@abb/common,@abb/server,@abb/common,@abb/controller}",
+    "build:server": "lerna run build --scope={@abb/common,@abb/server}",
     "rmrfnodemods": "rimraf packages/*/node_modules&&rimraf ./node_modules",
     "rmrfdist": "rimraf packages/*/dist"
   },

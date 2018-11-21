@@ -30,6 +30,12 @@ GRANT ALL PRIVILEGES ON DATABASE graphql_ts_server_boilerplate_test TO viaz1130;
 Graphql realm error:
 Ensure modules are using the same versions across node_modules
 
+Setup node for Docker
+https://nodejs.org/en/docs/guides/nodejs-docker-webapp/
+
+NOTE: Dockerfile name is case-sensitive on mac and not Windows.
+Error response from daemon: Cannot locate specified Dockerfile: Dockerfile
+
 Run build on common and server
 lerna run build --scope={@abb/common,@abb/server,@abb/common,@abb/controller}
 

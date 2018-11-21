@@ -1,0 +1,6 @@
+{
+	"packages": [ "packages/*" ],
+	"npmClient": "yarn",
+	"useWokspaces": true,
+	"version": "0.0.0"
+}

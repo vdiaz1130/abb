@@ -1,0 +1,15 @@
+{
+  "extends": ["../../tslint.json", "tslint-react"],
+  "rules": {
+    "jsx-alignment": false,
+    "jsx-no-multiline-js": false,
+    "jsx-curly-spacing": false
+  },
+  "linterOptions": {
+    "exclude": [
+      "config/**/*.js",
+      "node_modules/**/*.ts",
+      "coverage/lcov-report/*.js"
+    ]
+  }
+}

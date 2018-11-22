@@ -6,6 +6,7 @@ yarn
 docker
 digital ocean
 dokku
+heroku
 
 Basic PostGres Cmds
 https://www.codementor.io/engineerapart/getting-started-with-postgresql-on-mac-osx-are8jcopb
@@ -13,7 +14,7 @@ https://www.codementor.io/engineerapart/getting-started-with-postgresql-on-mac-o
 Installing ext on Postgress
 http://www.postgresqltutorial.com/postgresql-uuid/
 
-Postgres Seup
+Postgres Setup
 psql -U postgres
 create role vdiaz1130 with login password 'testtest';
 alter role vdiaz1130 createdb;
@@ -29,6 +30,27 @@ GRANT ALL PRIVILEGES ON DATABASE graphql_ts_server_boilerplate_test TO viaz1130;
 
 Graphql realm error:
 Ensure modules are using the same versions across node_modules
+
+SSH Error:
+https://www.digitalocean.com/community/questions/error-permission-denied-publickey-when-i-try-to-ssh?answer=44730
+
+Heroku
+https://devcenter.heroku.com/articles/heroku-cli
+https://aqueous-sands-19635.herokuapp.com/ | https://git.heroku.com/aqueous-sands-19635.git
+
+Heroku Deployment: See deploy_server_hk.sh
+
+Setup Netlify
+Used for redirects /\* /index.html 200
+Run:
+netlify login
+netlify init
+./deploy_web # runs netlify deploy
+
+Note: run yarn build:web (will build common and controller).
+Note: May need to deploy dependent server updates (e.g. api updates)
+
+# env.production flag set during deployment ??
 
 Setup node for Docker
 https://nodejs.org/en/docs/guides/nodejs-docker-webapp/

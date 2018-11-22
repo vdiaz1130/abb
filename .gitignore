@@ -5,5 +5,7 @@ build/
 temp/
 *.log
 dump.rdb
-.env
+.env.prod
+.env.production
 dist
+.netlify

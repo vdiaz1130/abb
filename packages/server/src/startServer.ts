@@ -60,12 +60,13 @@ export const startServer = async () => {
     } as any)
   );
 
+  const port = process.env.PORT || 4000;
   const cors = {
     credentials: true,
     origin:
       process.env.NODE_ENV === 'test'
         ? '*'
-        : (process.env.FRONTEND_HOST as string)
+        : (`${process.env.FRONTEND_HOST}` as string)
   };
 
   server.express.get('/confirm/:id', confirmEmail);
@@ -76,12 +77,11 @@ export const startServer = async () => {
     await createTypeormConn();
   }
 
-  const port = process.env.PORT || 4000;
   const app = await server.start({
     cors,
     port: process.env.NODE_ENV === 'test' ? 0 : port
   });
-  console.log(`Server is running on ${process.env.NODE_ENV}:${port}`);
+  console.log(`Server is running on ${process.env.FRONTEND_HOST}:${port}`);
 
   return app;
 };

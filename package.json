@@ -1,4 +1,5 @@
 {
+  "version": "1.0.0",
   "name": "fullStackAirBnBClone",
   "private": true,
   "workspaces": {
@@ -6,21 +7,25 @@
       "packages/*"
     ],
     "nohoist": [
-      "**/react-native",
-      "**/react-native/**",
       "**/expo",
       "**/expo/**",
+      "**/metro-bundler-config-yarn-workspaces",
+      "**/metro-bundler-config-yarn-workspaces/**",
+      "**/metro-bundler",
+      "**/metro-bundler/**",
+      "**/react-native-elements",
+      "**/react-native-elements/**",
       "**/react-native-typescript-transformer",
       "**/react-native-typescript-transformer/**",
-      "**/metro-bundler-config-yarn-workspaces",
-      "**/metro-bundler-config-yarn-workspaces/**"
+      "**/react-native",
+      "**/react-native/**"
     ]
   },
-  "version": "1.0.0",
   "scripts": {
     "test": "echo \"Sanity: root test script executed\" && exit 0",
     "build:server": "lerna run build --scope={@abb/common,@abb/server}",
     "build:web": "lerna run build --scope={@abb/common,@abb/controller,@abb/web}",
+    "remnode": "rimraf packages/*/node_modules&&rimraf ./node_modules",
     "renode": "rimraf packages/*/node_modules&&rimraf ./node_modules&&yarn install",
     "rmrfdist": "rimraf packages/*/dist"
   },
